@@ -17,6 +17,26 @@
   cursor: pointer;
 }
 
+.home-card-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home-card-buttons button {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-card-buttons button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 @media screen and (max-width: 1024px) {
   .home-container {
     grid-template-columns: repeat(3, 1fr);

@@ -7,12 +7,22 @@ const Home = () => {
   return (
     <div className="home-container">
       {allProjects.map((project) => (
-        <div
-          key={project.name}
-          onClick={() => navigate(project.path)}
-          className="home-card"
-        >
+        <div key={project.name} className="home-card">
           <h3>{project.name}</h3>
+          <div className="home-card-buttons">
+            <button
+              className="btn-preview"
+              onClick={() => navigate(project.path)}
+            >
+              Preview
+            </button>
+            <button
+              className="btn-code"
+              onClick={() => window.open(project.code, "_blank")}
+            >
+              View Code
+            </button>
+          </div>
         </div>
       ))}
     </div>
