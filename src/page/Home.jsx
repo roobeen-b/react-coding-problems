@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { allProjects } from "./config";
+import { allProjects } from "../config";
 
 const Home = () => {
   const navigate = useNavigate();

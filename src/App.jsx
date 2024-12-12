@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import Home from "./Home";
+import Home from "./page/Home";
 import { allProjects } from "./config";
+import PageLayout from "./page/layout";
 
 function App() {
   return (
@@ -9,11 +10,13 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         {allProjects.map((project) => (
-          <Route
-            key={project.name}
-            path={project.path}
-            element={project.component}
-          />
+          <Route key={project.name} element={<PageLayout />}>
+            <Route
+              key={project.name}
+              path={project.path}
+              element={project.component}
+            />
+          </Route>
         ))}
       </Routes>
       {/* <Accordian /> */}

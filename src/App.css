@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .home-container {
@@ -37,6 +36,112 @@
   color: #fff;
 }
 
+.page-layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-header {
+  position: sticky;
+  top: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  height: 50px;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-header-menu {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  display: none;
+}
+
+.page-container {
+  display: flex;
+  gap: 20px;
+}
+
+.project-list {
+  display: block;
+  position: sticky;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  overflow: auto;
+  padding: 20px 10px 20px 10px;
+  background-color: #fff;
+}
+
+.mobile-sidebar {
+  display: none;
+}
+
+/* width */
+.project-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+.project-list::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+.project-list::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.project-list::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+ul li {
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+  background-color: rgb(202, 202, 193);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.active-tab {
+  background-color: darkslategray;
+  color: #fff;
+}
+
+.page-content {
+  width: 100%;
+  overflow-x: auto;
+  flex: 1;
+  padding: 20px;
+  margin-top: 50px;
+}
+
 @media screen and (max-width: 1024px) {
   .home-container {
     grid-template-columns: repeat(3, 1fr);
@@ -46,6 +151,26 @@
 @media screen and (max-width: 768px) {
   .home-container {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-list {
+    display: none;
+  }
+
+  .project-header-menu {
+    display: block;
+  }
+
+  .mobile-sidebar {
+    display: block;
+    position: absolute;
+    top: 50;
+    left: 0;
+    padding: 20px 10px 20px 10px;
+    background-color: #fff;
+    height: 100vh;
+    overflow: auto;
+    z-index: 9999;
   }
 }
 
