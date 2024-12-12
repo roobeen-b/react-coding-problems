@@ -1,0 +1,27 @@
+.tree-container {
+  width: 200px;
+  margin-inline: auto;
+  color: white;
+}
+
+.tree-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: blueviolet;
+  padding: 5px;
+  margin: 5px;
+}
+
+.tree-item-children:hover {
+  background-color: rgb(118, 63, 169);
+}
+
+.tree-item-children {
+  cursor: pointer;
+}
+
+.nested-tree-item {
+  padding-left: 20px;
+  margin-left: 20px;
+  border-left: solid 1px #000;
+}

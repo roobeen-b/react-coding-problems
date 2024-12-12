@@ -1,0 +1,41 @@
+.random-component {
+  color: brown;
+  font-size: 20px;
+}
+
+.tab-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tab-items {
+  display: flex;
+}
+
+.tab-items.active-tab {
+  background-color: #fff;
+  color: blueviolet;
+  border: 1px solid #000;
+}
+
+.tab-items .inactive-tab {
+  background-color: blueviolet;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.tab-items .tab-label {
+  /* background-color: blueviolet; */
+  padding: 10px;
+
+  border-radius: 5px;
+  cursor: pointer;
+  /* color: #fff; */
+}
+
+.tab-content {
+  height: 50px;
+}

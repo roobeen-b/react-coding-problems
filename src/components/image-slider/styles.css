@@ -1,0 +1,33 @@
+.slider-item {
+  position: relative;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.show-image {
+  display: block;
+}
+
+.hide-image {
+  display: none;
+}
+
+.arrow-left {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+  color: #fff;
+}
+
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  cursor: pointer;
+  color: #fff;
+}

@@ -1,0 +1,24 @@
+.load-more-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #000;
+}
+
+.product-item .product-thumbnail {
+  width: 300px;
+  height: 400px;
+  padding: 20px;
+}
+
+.product-thumbnail img {
+  max-width: 100%;
+  display: block;
+}
+
+.load-more-button {
+  margin-top: 20px;
+}
