@@ -7,6 +7,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  padding: 20px;
 }
 
 .home-card {
@@ -20,6 +21,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  margin-top: 5px;
 }
 
 .home-card-buttons button {
